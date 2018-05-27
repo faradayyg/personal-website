@@ -1,0 +1,167 @@
+body{
+	color: $text;
+	margin:0px;
+	padding: 0px;
+	font-family: 'Lato', sans-serif;
+}
+
+*{
+    box-sizing: border-box !important;
+}
+
+a{
+	text-decoration:none;
+	color: $tint;
+}
+
+.wrap{
+	height: 100vh;
+	min-height:500px;
+}
+
+.nav{
+	height:50px;
+	position:fixed;
+	background: #fff;
+	top:0px;
+	width:100vw;
+	padding:5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.15);
+	img{
+		max-height: 40px;
+		&.brand{
+			border-radius:5px;
+			border: 2px solid #000;
+		}
+	}
+
+	ul{
+		padding:5px;
+		float: right;
+		margin:0px;
+		text-align:center;
+		margin-top:5px;
+		li {
+			a{
+				&.active, &.active:hover{
+					color: #fff;
+					background:$tint;
+					transition: 0.3s ease-in;
+				}
+				color: $text;
+				&:hover {
+					background:rgba(0,0,0,0.3);
+					color:#fff;
+					transition: 0.4s ease-in;
+				}
+
+				margin-right:10px;
+				padding: 5px 15px;
+				border-radius: 5px;
+			}
+			display:inline-block;
+		}
+	}
+
+	@media only screen and (max-width:500px)
+	{
+		ul{
+			float:unset;
+		}
+		img{
+			display:none;
+		}
+	}
+}
+
+.flex-center--all{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	width: 80%;
+	margin:auto;
+}
+
+.small-container{
+	max-width: 700px;
+}
+
+.pull-right{
+	float:right;
+}
+
+.social
+{
+	img{
+		height: 35px;
+		transition: 0.3s;
+		&:hover{
+			filter: invert(100%);
+			transition: 0.3s;
+		}
+	}
+	margin-top:50px;
+	ul{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+		li{	
+			display:inline-block;
+			margin:5px;
+		}
+	}
+}
+
+h1,h2,h3{
+	font-family: 'Alfa Slab One', cursive;
+	font-weight: normal;
+}
+
+@media only screen and (max-width: 500px)
+{
+	.textarea{
+		padding:10px;
+	}
+	.container{
+		width:100vw;
+	}
+}
+
+.pre_load{
+	@extend .wrap;
+	width:100vw;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background:#fff;
+	position:fixed;
+	top:0px;
+	z-index:2;
+}
+
+.line-dbl{
+	line-height: 1.5;
+}
+
+.anim-pulse{
+	animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+.round{
+	border-radius: 50%
+}
+.loads_content {
+	cursor: pointer;
+}
