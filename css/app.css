@@ -19,7 +19,8 @@ a {
   color: #2980B9; }
 
 .wrap, .pre_load {
-  height: 100vh;
+  height: calc(100vh - 50px);
+  padding-top: 50px;
   min-height: 500px; }
 
 .nav {

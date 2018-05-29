@@ -9,7 +9,7 @@ var main_div
 	setTimeout(function() {
 		hide_preload();
 	},1000);
-	
+
 }());
 
 function show_preload() {
@@ -61,7 +61,7 @@ function nav_item_click(e) {
 
 function history_nav_listener() {
 	let current_path = location.pathname.replace('/','');
-	if(document.querySelector("#"+current_path)) {
+	if(current_path.length > 1 &&document.querySelector("#"+current_path)) {
 		load_content(current_path);
 	}
 	else {
