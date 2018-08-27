@@ -1,4 +1,4 @@
-var main_div
+let main_div;
 
 (function() {
 
@@ -33,13 +33,13 @@ function load_content(target) {
 	top_nav_links.forEach(elem=>{
 
 		let anchor_tag = elem.querySelector('a');
-		if(anchor_tag.getAttribute("href") == `/${target}`) {
+		if(anchor_tag.getAttribute("href") === `/${target}`) {
 			anchor_tag.classList.add('active');
 		}
 		else {
 			anchor_tag.classList.remove('active');
 		}
-	})
+	});
 	set_nav_listeners();
 }
 
